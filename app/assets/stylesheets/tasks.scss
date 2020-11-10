@@ -1,3 +1,37 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.box_display {
+  background: #ffffff3d;
+  padding: 10px;
+  border: solid #a2a2a273 1px;
+  border-radius: 5px;
+  box-shadow: 5px 7px 10px #00000021;
+  margin-bottom: 10px;
+}
+
+.edit_task {
+  position: absolute;
+  right: 20px;
+  top: 32px;
+  background: #e0dfddbd;
+  color: black;
+  padding: 5px 10px;
+  border: solid #0000001f 1px;
+  border-radius: 5px;
+  box-shadow: 3px 4px 7px #0000001c;
+  font-size: 15px;
+}
+.options {
+  border-top: solid #a0d3ff73 1px;
+  color: #8bb9e2;
+  font-size: 13px;
+  padding: 10px;
+}
+
+.back_to_list {
+  color: #8bb9e2;
+  font-size: 13px;
+  padding: 10px;
+}

@@ -1,17 +1,29 @@
-<h1><%= @task.title %></h1>
-<p><%= @task.details %> </p>
-<% if @task.completed == true %>
-   <input type="checkbox" value="<%= @task.title %>" checked>
-   <label for="<%= @task.title %>">This task is completed</label>
-<% else %>
-   <input type="checkbox" value="<%= @task.title %>">
-   <label for="<%= @task.title %>">This task is not completed yet</label>
-<% end %>
+<div class="task_info">
+  <h1><%= @task.title %></h1>
 
-<div>
-  <%= link_to "Back to list", tasks_path %>
-</div>
+  <div class="box_display">
+    <p><%= @task.details %> </p>
+  </div>
 
-<div>
-  <%= link_to "Edit this task", task_edit_path(@task) %>
+  <div>
+    <% if @task.completed == true %>
+       <input type="checkbox" value="<%= @task.title %>" checked>
+       <label for="<%= @task.title %>">This task is completed</label>
+    <% else %>
+       <input type="checkbox" value="<%= @task.title %>">
+       <label for="<%= @task.title %>">This task is not completed yet</label>
+    <% end %>
+  </div>
+
+  <div class="options">
+    <%= link_to tasks_path, class:"options_text" do %>
+      <i class="fas fa-undo"></i>
+      <span>Back to list</span>
+    <% end %>
+  </div>
+
+  <%= link_to edit_task_path(@task), class:"edit_task" do %>
+    <i class='fas fa-pen'></i>
+    <span>Edit this task</span>
+  <% end %>
 </div>
